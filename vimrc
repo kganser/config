@@ -22,4 +22,4 @@ set expandtab
 
 " Display tabs and trailing spaces visually
 set list
-set listchars=tab:\ \ ,trail:·
+set listchars=tab:··,trail:·

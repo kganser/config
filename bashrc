@@ -2,13 +2,13 @@
 test -z "$PS1" && return
 
 # Enter tmux
-test -x `which tmux` && { test -n "$TMUX" || tmux at || tmux }
+test -x `which tmux` && { test -n "$TMUX" || tmux at || tmux; }
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
 shopt -s checkwinsize
 
-export FIGNORE=.svn
+export FIGNORE='.svn:.git'
 export PATH="$HOME/bin/:$PATH"
 export PS1='\$ '
 
