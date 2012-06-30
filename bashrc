@@ -2,7 +2,7 @@
 test -z "$PS1" && return
 
 # Enter tmux
-test -x `which tmux` && { test -n "$TMUX" || tmux at || tmux; }
+which tmux && { test -n "$TMUX" || tmux at || tmux; }
 
 HISTCONTROL=ignoreboth
 shopt -s histappend

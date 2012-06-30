@@ -9,10 +9,8 @@ set incsearch
 set hlsearch
 map <Space> :noh<cr>
 
-" Undo across sessions
-"silent !mkdir ~/.vim/backups > /dev/null 2>&1
-"set undodir=~/.vim/backups
-"set undofile
+" Don't wrap
+set nowrap
 
 " Indentation
 set smartindent
