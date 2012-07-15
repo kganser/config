@@ -1,8 +1,9 @@
 # If not running interactively, don't do anything
 test -z "$PS1" && return
 
-# Enter tmux
-which tmux > /dev/null && { test -n "$TMUX" || tmux at || tmux; }
+# Static ssh agent socket symlink for tmux
+SOCK="/tmp/ssh-agent-$USER"
+test -n "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$SOCK" && ln -sf $SSH_AUTH_SOCK $SOCK && export SSH_AUTH_SOCK=$SOCK
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
@@ -14,6 +15,7 @@ export PS1='\$ '
 
 # http://www.shellperson.net/using-sudo-with-an-alias/
 alias sudo='sudo '
+alias untar='tar zxvf'
 
 # Enable ls color support
 if [ -x /usr/bin/dircolors ]; then
