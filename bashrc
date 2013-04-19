@@ -10,7 +10,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 export FIGNORE='.svn:.git'
-export GREP_OPTIONS='--exclude-dir=.svn:.git'
+export GREP_OPTIONS='--exclude-dir=.svn --exclude-dir=.git'
 export PATH="$HOME/bin/:$PATH"
 export PS1='\$ '
 
