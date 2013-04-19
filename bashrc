@@ -1,4 +1,4 @@
-# If not running interactively, don't do anything
+#If not running interactively, don't do anything
 test -z "$PS1" && return
 
 # Static ssh agent socket symlink for tmux
@@ -10,6 +10,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 export FIGNORE='.svn:.git'
+export GREP_OPTIONS='--exclude-dir=.svn:.git'
 export PATH="$HOME/bin/:$PATH"
 export PS1='\$ '
 
