@@ -21,3 +21,6 @@ set expandtab
 " Display tabs and trailing spaces visually
 set list
 set listchars=tab:→\ ,trail:·
+
+" Use w!! to save with sudo
+cmap w!! w !sudo tee > /dev/null %
