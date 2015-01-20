@@ -17,6 +17,7 @@ export PS1='\$ '
 # http://www.shellperson.net/using-sudo-with-an-alias/
 alias sudo='sudo '
 alias untar='tar zxvf'
+alias encodeURIComponent='perl -pe '\''s/([^a-zA-Z0-9_.!~*()'\''\'\'''\''-])/sprintf("%%%02X",ord($1))/ge'\'
 
 # Enable ls color support
 if [ -x /usr/bin/dircolors ]; then
